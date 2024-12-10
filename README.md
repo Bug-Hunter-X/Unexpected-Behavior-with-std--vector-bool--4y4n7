@@ -1,0 +1,5 @@
+# Unexpected Behavior with std::vector<bool> in C++
+
+This repository demonstrates a common, yet subtle, issue encountered when using `std::vector<bool>` in C++.  The `std::vector<bool>` specialization is optimized for memory efficiency, but this optimization comes at the cost of deviating from the standard vector interface. This can lead to surprising behavior, especially for developers unfamiliar with this specialization.
+
+The `bug.cpp` file showcases a simple example where using `std::vector<bool>` results in unexpected behavior.  The solution (`bugSolution.cpp`) provides a fix by using a different container type, such as `std::vector<int>` or `std::vector<char>`, which follows the standard vector behavior more closely.   This demonstrates a better alternative for handling boolean values within a vector.
